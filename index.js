@@ -4,10 +4,10 @@ var bodyparser = require('body-parser')
 const router = require('./Router');
 const dbconnect = require('./DB/MongoConnect')
 
-
+const cors = require("cors");
 
 const app = express();
-
+app.use(cors());
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({
